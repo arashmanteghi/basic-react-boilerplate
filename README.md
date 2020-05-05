@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a href="http://my.emofid.com/">
+  <h1 align="center">
+    My Mofid project
+  </h1>
+</a>
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and customizable with [React App Rewired](https://github.com/timarney/react-app-rewired).
 
 ## Available Scripts
 
@@ -37,32 +43,50 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `yarn lint`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There is linter which configured with default react-app linter and [airbnb](https://www.npmjs.com/package/eslint-config-airbnb) linter and also uses [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) plugin.
 
-### Code Splitting
+Any lint error prevent commit changes via [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+### `yarn lint:fix`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Fix lint error as could as possible.
 
-### Making a Progressive Web App
+<hr />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## React Practices
+- Use react hooks to create components as could as possible.
+- Use dynamic import for importing route components which usually are in `container` folder.
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<hr />
 
-### Deployment
+## Styling
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+In this project, creating style is with help of [styled-components](https://styled-components.com/).
 
-### `yarn build` fails to minify
+<hr />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## State Management
+
+In this project we uses [redux](https://redux.js.org/) as state manager and [redux-saga](https://redux-saga.js.org/) as a middleware that handles async requests.
+
+By the way [redux-logger](https://github.com/LogRocket/redux-logger) is logging redux action in console on development mode.
+
+<hr />
+
+## Routing Mechanism
+
+We've have been using [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) to manage routes in this project.
+
+<hr />
+
+## Git Commit Convention
+
+We've have been using [Karma](http://karma-runner.github.io/4.0/dev/git-commit-msg.html) as convention of commit massage.
+
+
+
